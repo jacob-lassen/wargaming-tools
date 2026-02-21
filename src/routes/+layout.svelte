@@ -8,14 +8,16 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<Navbar class="border-b bg-white px-4 py-2.5">
-	<NavBrand href="/" class="text-xl font-semibold">Wargame Tools</NavBrand>
+<Navbar class="border-b bg-slate-950 px-4 py-2.5">
+	<NavBrand href="/" class="text-xl font-semibold text-slate-200">Wargame Tools</NavBrand>
 	<NavHamburger />
 	<NavUl activeUrl={page.url.pathname}>
-		<NavLi href="/info-cards">Info cards</NavLi>
+		<NavLi href="/info-cards" class="text-slate-200">Info cards</NavLi>
 	</NavUl>
 </Navbar>
 
-<main class="mx-auto w-full max-w-6xl px-4 py-8">
+<main class="min-h-screen bg-slate-900 text-slate-200">
+	<div class="mx-auto w-full max-w-6xl px-4 py-8">
 	{@render children()}
+	</div>
 </main>
