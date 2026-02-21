@@ -1,19 +1,17 @@
 <script lang="ts">
 	import UnitCard from './unit-card.svelte';
 	import type { Unit } from '../types/unit.interface';
-    // ToDo turn stats into an array of objects with name and value, to allow for more flexible display and sorting
-    // ToDo turn Tough into a stat
 	const units: Unit[] = [
         {
             "name": "Inquisitor",
             "cost": "100pts",
-            "stats": {
-            "Q": "3+",
-            "D": "3+"
-            },
+            "stats": [
+                { "name": "Q", "value": "3+" },
+                { "name": "D", "value": "3+" },
+                { "name": "T", "value": "3" }
+            ],
             "specialRules": [
             "Hero",
-            "Tough(3)",
             "Inquisitorial Agent",
             "Fortified",
             "Precision Fighter Aura"
@@ -32,14 +30,14 @@
         {
             "name": "Inquisitorial Officer",
             "cost": "40pts",
-            "stats": {
-            "Q": "4+",
-            "D": "5+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "5+" },
+                { "name": "T", "value": "3" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Hero",
-            "Tough(3)"
             ],
             "weapons": [
             {
@@ -61,10 +59,11 @@
         {
             "name": "Dog",
             "cost": "20pts",
-            "stats": {
-            "Q": "4+",
-            "D": "4+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "4+" },
+                { "name": "T", "value": "-" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Fortified"
@@ -81,10 +80,11 @@
         {
             "name": "Crusader Henchman",
             "cost": "45pts",
-            "stats": {
-            "Q": "4+",
-            "D": "4+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "4+" },
+                { "name": "T", "value": "-" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Fortified",
@@ -103,10 +103,11 @@
         {
             "name": "Crusader Henchman",
             "cost": "30pts",
-            "stats": {
-            "Q": "4+",
-            "D": "4+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "4+" },
+                { "name": "T", "value": "-" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Fortified"
@@ -124,10 +125,11 @@
         {
             "name": "Crusader Henchman",
             "cost": "30pts",
-            "stats": {
-            "Q": "4+",
-            "D": "4+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "4+" },
+                { "name": "T", "value": "-" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Fortified"
@@ -145,10 +147,11 @@
         {
             "name": "Gunsmith Henchman",
             "cost": "35pts",
-            "stats": {
-            "Q": "4+",
-            "D": "4+"
-            },
+            "stats": [
+                { "name": "Q", "value": "4+" },
+                { "name": "D", "value": "4+" },
+                { "name": "T", "value": "-" }
+            ],
             "specialRules": [
             "Inquisitorial Agent",
             "Unpredictable Shooter",

@@ -2,8 +2,6 @@
 	import type { Unit } from '../types/unit.interface';
 
 	let { unit }: { unit: Unit } = $props();
-
-	const statEntries = $derived(Object.entries(unit.stats));
 </script>
 
 <article class="unit-card bg-taupe-950 border-taupe-600 border-1 text-taupe-200">
@@ -13,10 +11,10 @@
 	</header>
 
 	<section class="stat-strip">
-		{#each statEntries as [label, value]}
+		{#each unit.stats as stat}
 			<div class="stat-item">
-				<span class="stat-label">{label}</span>
-				<span class="stat-value">{value}</span>
+				<span class="stat-label">{stat.name}</span>
+				<span class="stat-value">{stat.value}</span>
 			</div>
 		{/each}
 	</section>
