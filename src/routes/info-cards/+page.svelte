@@ -1,1 +1,4 @@
-<h1>Info cards</h1>
+<script>
+    import CardBuilder from "$lib/info-cards/components/card-builder.svelte";
+</script>
+<CardBuilder />
