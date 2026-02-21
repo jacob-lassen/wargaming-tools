@@ -1,7 +1,8 @@
 <script lang="ts">
 	import UnitCard from './unit-card.svelte';
 	import type { Unit } from '../types/unit.interface';
-
+    // ToDo turn stats into an array of objects with name and value, to allow for more flexible display and sorting
+    // ToDo turn Tough into a stat
 	const units: Unit[] = [
         {
             "name": "Inquisitor",

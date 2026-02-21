@@ -6,10 +6,10 @@
 	const statEntries = $derived(Object.entries(unit.stats));
 </script>
 
-<article class="unit-card">
+<article class="unit-card bg-taupe-950 border-taupe-600 border-1 text-taupe-200">
 	<header class="top-row">
 		<h3>{unit.name}</h3>
-		<span class="cost-pill">{unit.cost}</span>
+		<span class="cost-pill bg-red-900">{unit.cost}</span>
 	</header>
 
 	<section class="stat-strip">
@@ -44,12 +44,7 @@
 	.unit-card {
 		width: min(100%, 320px);
 		border-radius: 14px;
-		border: 1px solid rgba(255, 255, 255, 0.2);
 		padding: 1.15rem;
-		color: #eef2f7;
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-			0 14px 24px rgba(0, 0, 0, 0.45);
 		position: relative;
 		overflow: hidden;
 	}
@@ -59,12 +54,9 @@
 		align-items: flex-end;
 		justify-content: space-between;
 		padding-bottom: 0.85rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 	}
 
 	.cost-pill {
-		background: rgba(180, 55, 76, 0.75);
-		color: #fff;
 		padding: 0.3rem 0.6rem;
 		font-size: 0.85rem;
 		font-weight: 700;
@@ -80,7 +72,6 @@
 	}
 
 	.stat-strip {
-		margin-top: 0.95rem;
 		border-top: 2px solid rgba(180, 55, 76, 0.75);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 		padding: 0.8rem 0;
@@ -113,9 +104,7 @@
 	}
 
 	section {
-		margin-top: 0.95rem;
 		padding-top: 0.95rem;
-		border-top: 1px solid rgba(255, 255, 255, 0.18);
 	}
 
 	h3 {

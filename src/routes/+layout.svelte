@@ -9,15 +9,15 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<Navbar class="border-b bg-slate-950 px-4 py-2.5">
-	<NavBrand href={resolve('/')} class="text-xl font-semibold text-slate-200">Wargame Tools</NavBrand>
+<Navbar class="border-b bg-mist-900 px-4 py-2.5">
+	<NavBrand href={resolve('/')} class="text-xl font-semibold text-mist-200">Wargame Tools</NavBrand>
 	<NavHamburger />
 	<NavUl activeUrl={page.url.pathname}>
-		<NavLi href={resolve('/info-cards')} class="text-slate-200">Info cards</NavLi>
+		<NavLi href={resolve('/info-cards')} class="text-mist-200">Info cards</NavLi>
 	</NavUl>
 </Navbar>
 
-<main class="min-h-screen bg-slate-900 text-slate-200">
+<main class="min-h-screen bg-mist-950 text-mist-200">
 	<div class="mx-auto w-full max-w-6xl px-4 py-8">
 	{@render children()}
 	</div>
