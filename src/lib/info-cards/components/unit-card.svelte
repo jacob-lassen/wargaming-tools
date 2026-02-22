@@ -6,7 +6,7 @@
 
 <article class="unit-card bg-taupe-950 border-taupe-600 border-1 text-taupe-200">
 	<header class="top-row">
-		<h3>{unit.name}</h3>
+		<h2>{unit.name}</h2>
 		<span class="cost-pill bg-red-900">{unit.cost}</span>
 	</header>
 
@@ -20,7 +20,6 @@
 	</section>
 
 	<section>
-		<h3>SPECIAL RULES</h3>
 		<ul>
 			{#each unit.specialRules as rule}
 				<li>{rule}</li>
@@ -29,7 +28,7 @@
 	</section>
 
 	<section>
-		<h3>WEAPONS</h3>
+		<h2>WEAPONS</h2>
 		<ul>
 			{#each unit.weapons as weapon}
 				<li>{weapon.name} ({weapon.stats.join(', ')})</li>
@@ -63,8 +62,8 @@
 	}
 
 	.cost-pill {
-		padding: 0.3rem 0.6rem;
-		font-size: 0.85rem;
+		padding: 0.1rem 0.3rem;
+		font-size: 0.75rem;
 		font-weight: 700;
 		border-radius: 6px;
 		text-transform: lowercase;
@@ -72,7 +71,7 @@
 
 	h2 {
 		margin: 0;
-		font-size: 1.4rem;
+		font-size: 0.85rem;
 		font-weight: 700;
 		letter-spacing: 0.02em;
 	}
