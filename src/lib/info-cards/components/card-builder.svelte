@@ -185,7 +185,7 @@
 <style>
 	.card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
+		grid-template-columns: repeat(auto-fit, 63mm);
 		gap: 1rem;
 		justify-content: center;
 	}

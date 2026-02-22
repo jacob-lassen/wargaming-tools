@@ -40,11 +40,19 @@
 
 <style>
 	.unit-card {
-		width: min(100%, 320px);
+		width: 63mm;
+		height: 88mm;
+		box-sizing: border-box;
 		border-radius: 14px;
 		padding: 1.15rem;
 		position: relative;
 		overflow: hidden;
+	}
+
+	@media (max-width: 640px) {
+		.unit-card {
+			width: min(100%, 63mm);
+		}
 	}
 
 	.top-row {
