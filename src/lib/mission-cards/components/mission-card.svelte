@@ -153,6 +153,10 @@
 			0 18px 32px -20px var(--card-shadow),
 			inset 0 1px 0 rgba(255, 255, 255, 0.08);
 		color: var(--text-main);
+		print-color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+		break-inside: avoid;
+		page-break-inside: avoid;
 	}
 
 	@media (max-width: 640px) {
@@ -540,5 +544,12 @@
 		padding: 0.9rem 0.7rem;
 		top: 1rem;
 		right: 1rem;
+	}
+
+	@media print {
+		.mission-card {
+			box-shadow: none;
+			margin: 0;
+		}
 	}
 </style>

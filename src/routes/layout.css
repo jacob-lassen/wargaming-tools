@@ -1,3 +1,24 @@
 @import 'tailwindcss';
 @plugin 'flowbite/plugin';
 @source '../../node_modules/flowbite-svelte/dist';
+
+@page {
+	margin: 12mm;
+}
+
+@media print {
+	nav {
+		display: none !important;
+	}
+
+	main {
+		min-height: auto !important;
+		background: #fff !important;
+		color: #000 !important;
+	}
+
+	main > div {
+		max-width: none !important;
+		padding: 0 !important;
+	}
+}

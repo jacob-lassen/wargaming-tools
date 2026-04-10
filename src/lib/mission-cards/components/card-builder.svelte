@@ -10,35 +10,48 @@
 		}
 	];
 
+	function printCards() {
+		window.print();
+	}
 </script>
 
-<section class="intro">
-	<h1>Mission Card Templates</h1>
-	<p>
-		Previewing the selected mission card layout. We can now build the generator around this
-		bottom panel style.
-	</p>
+<section class="print-area">
+	<div class="card-grid">
+		<MissionCard mission={missions[0]} template="bottom-panel" />
+	</div>
 </section>
 
-<div class="card-grid">
-	<MissionCard mission={missions[0]} template="bottom-panel" />
+<div class="actions print-hidden">
+	<button type="button" class="print-button" onclick={printCards}>Print Cards</button>
 </div>
 
 <style>
-	.intro {
-		margin-bottom: 1.5rem;
+	.actions {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 0.85rem;
 	}
 
-	.intro h1 {
-		margin: 0 0 0.4rem;
-		font-size: clamp(1.7rem, 2.6vw, 2.2rem);
-		font-weight: 700;
+	.print-button {
+		border: 1px solid rgba(226, 232, 240, 0.18);
+		border-radius: 999px;
+		padding: 0.45rem 0.8rem;
+		font: inherit;
+		font-size: 0.88rem;
+		font-weight: 600;
+		color: rgba(226, 232, 240, 0.76);
+		background: rgba(255, 255, 255, 0.04);
+		cursor: pointer;
+		box-shadow: none;
 	}
 
-	.intro p {
-		margin: 0;
-		max-width: 46rem;
-		color: rgba(226, 232, 240, 0.72);
+	.print-button:hover {
+		background: rgba(255, 255, 255, 0.08);
+		color: rgba(226, 232, 240, 0.92);
+	}
+
+	.print-area {
+		width: 100%;
 	}
 
 	.card-grid {
@@ -46,5 +59,20 @@
 		grid-template-columns: repeat(auto-fit, 63mm);
 		gap: 1rem;
 		justify-content: center;
+	}
+
+	@media print {
+		.print-hidden {
+			display: none !important;
+		}
+
+		.print-area {
+			width: auto;
+		}
+
+		.card-grid {
+			gap: 0;
+			justify-content: start;
+		}
 	}
 </style>
