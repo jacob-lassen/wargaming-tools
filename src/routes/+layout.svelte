@@ -14,6 +14,7 @@
 	<NavHamburger />
 	<NavUl activeUrl={page.url.pathname}>
 		<NavLi href={resolve('/info-cards')} class="text-mist-200">Info cards</NavLi>
+		<NavLi href={resolve('/mission-cards')} class="text-mist-200">Mission cards</NavLi>
 	</NavUl>
 </Navbar>
 
