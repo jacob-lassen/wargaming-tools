@@ -37,6 +37,16 @@
 			name: 'High value target',
 			text: 'Destroy the most expensive enemy unit (points cost).\nIn case of a tie, any counts.',
 			reward: '2VP'
+		}, 
+		{
+			name: 'Seize consecutive',
+			text: 'Control two objectives with consecutive number. \n1 & 6 are consecutive.',
+			reward: '2VP'
+		},
+		{
+			name: 'Steady progress',
+			text: 'Control more objectives at the end of the turn, than you did at the start of the turn.',
+			reward: '1VP'
 		}
 	];
 
