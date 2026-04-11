@@ -5,7 +5,17 @@
 	const missions: Mission[] = [
 		{
 			name: 'Critical personnel',
-			text: 'Destroy critical personnel.\nWhen card is drawn each player must choose one unit on the battlefield army to be critical personnel.',
+			text: 'Destroy one or more critical personnel.\nWhen this card is drawn each player must choose one friendly unit on the battlefield designated as critical personnel.',
+			reward: '1VP'
+		},
+		{
+			name: 'Mass casualties',
+			text: 'Destroy two or more enemy units.',
+			reward: '1VP'
+		},
+		{
+			name: 'Seize control',
+			text: 'Control 1 or more objective controlled by an opponent.',
 			reward: '1VP'
 		}
 	];
@@ -17,7 +27,9 @@
 
 <section class="print-area">
 	<div class="card-grid">
-		<MissionCard mission={missions[0]} template="bottom-panel" />
+		{#each missions as mission}
+			<MissionCard {mission} template="bottom-panel"/>
+		{/each}
 	</div>
 </section>
 
