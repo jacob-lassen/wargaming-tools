@@ -1,4 +1,5 @@
 <script lang="ts">
+	import BottomPanelLayout from './bottom-panel.layout.svelte';
 	import MissionCard from './mission-card.svelte';
 	import type { Mission } from '../types/mission.interface';
 
@@ -58,7 +59,7 @@
 <section class="print-area">
 	<div class="card-grid">
 		{#each missions as mission}
-			<MissionCard {mission} template="bottom-panel"/>
+			<MissionCard {mission} layout={BottomPanelLayout} theme="bottom-panel" />
 		{/each}
 	</div>
 </section>
