@@ -35,7 +35,7 @@
 		},
 		{
 			name: 'High value target',
-			text: 'Destroy the most expensive enemy unit (points cost).\nIn case of a tie, any counts.',
+			text: 'Destroy the most expensive enemy unit by points cost.\nIn case of a tie, any counts.',
 			reward: '2VP'
 		}, 
 		{
