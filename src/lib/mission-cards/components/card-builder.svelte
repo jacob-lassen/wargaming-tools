@@ -15,7 +15,7 @@
 		},
 		{
 			name: 'Seize control',
-			text: 'Control 1 or more objective markers controlled that was controlled by an opponent at the start of the round.',
+			text: 'Control 1 or more objective markers that was controlled by an opponent at the start of the round.',
 			reward: '1VP'
 		},
 		{
