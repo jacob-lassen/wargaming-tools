@@ -47,7 +47,7 @@
 			name: 'Steady progress',
 			text: 'Control more objectives at the end of the turn, than you did at the start of the turn.',
 			reward: '1VP'
-		}
+		},
 	];
 
 	function printCards() {
