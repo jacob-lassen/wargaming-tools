@@ -25,7 +25,7 @@
 		},
 		{
 			name: 'Domination',
-			text: 'Control more objective markers than your opponent at the end of the round.',
+			text: 'Control the most objective markers at the end of the round.',
 			reward: '2VP'
 		},
 		{
