@@ -15,8 +15,28 @@
 		},
 		{
 			name: 'Seize control',
-			text: 'Control 1 or more objective controlled by an opponent.',
+			text: 'Control 1 or more objective markers controlled that was controlled by an opponent at the start of the round.',
 			reward: '1VP'
+		},
+		{
+			name: 'Hold the line',
+			text: 'Have no enemy units within your deployment zone.',
+			reward: '1VP'
+		},
+		{
+			name: 'Domination',
+			text: 'Control more objective markers than your opponent at the end of the round.',
+			reward: '2VP'
+		},
+		{
+			name: 'Play it safe',
+			text: 'Do not lose any friendly units this round.',
+			reward: '2VP'
+		},
+		{
+			name: 'High value target',
+			text: 'Destroy the most expensive enemy unit (points cost).\nIn case of a tie, any counts.',
+			reward: '2VP'
 		}
 	];
 
