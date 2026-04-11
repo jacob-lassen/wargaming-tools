@@ -1,36 +1,39 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
 	import type { Mission } from '../types/mission.interface';
-
-	export type MissionCardTheme = 'bottom-panel';
+	import type { CardTheme } from '../../themes/card-theme.interface';
 
 	let {
 		mission,
 		layout: Layout,
-		theme = 'bottom-panel'
+		theme
 	}: {
 		mission: Mission;
 		layout: Component<{ mission: Mission }>;
-		theme?: MissionCardTheme;
+		theme: CardTheme;
 	} = $props();
+
+	const themeVariables = $derived([
+		`--card-bg: ${theme.surface.background}`,
+		`--card-border: ${theme.surface.border}`,
+		`--card-shadow: ${theme.surface.shadow}`,
+		`--color-primary: ${theme.palette.primary}`,
+		`--color-secondary: ${theme.palette.secondary}`,
+		`--color-accent: ${theme.palette.accent}`,
+		`--color-accent-soft: ${theme.palette.accentSoft}`,
+		`--text-main: ${theme.text.primary}`,
+		`--text-muted: ${theme.text.muted}`,
+		`--card-chrome-bg: ${theme.effects?.chromeBackground ?? 'none'}`
+	].join('; '));
 </script>
 
-<article class="mission-card" data-theme={theme}>
+<article class="mission-card" style={themeVariables}>
 	<div class="card-chrome"></div>
 	<Layout {mission} />
 </article>
 
 <style>
 	.mission-card {
-		--card-bg: linear-gradient(180deg, #18251f 0%, #09100c 100%);
-		--card-border: rgba(255, 255, 255, 0.14);
-		--card-shadow: rgba(0, 0, 0, 0.35);
-		--accent: #a7df7f;
-		--accent-soft: rgba(167, 223, 127, 0.14);
-		--text-main: #f5efe4;
-		--text-muted: rgba(245, 239, 228, 0.72);
-		--reward-footer-bg: rgba(167, 223, 127, 0.14);
-		--reward-footer-border: rgba(167, 223, 127, 0.18);
 		width: 63mm;
 		height: 88mm;
 		box-sizing: border-box;
@@ -62,6 +65,7 @@
 		position: absolute;
 		inset: 0;
 		pointer-events: none;
+		background: var(--card-chrome-bg);
 	}
 
 	.mission-card :global(.card-header),
@@ -124,8 +128,8 @@
 		justify-content: space-between;
 		margin: 0 -1rem -1rem;
 		padding: 0.85rem 1rem;
-		background: var(--reward-footer-bg);
-		border-top: 1px solid var(--reward-footer-border);
+		background: var(--color-secondary);
+		border-top: 1px solid var(--color-accent-soft);
 	}
 
 	@media print {

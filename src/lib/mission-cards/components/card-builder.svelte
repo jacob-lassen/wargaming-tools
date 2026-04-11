@@ -2,6 +2,7 @@
 	import BottomPanelLayout from './bottom-panel.layout.svelte';
 	import MissionCard from './mission-card.svelte';
 	import type { Mission } from '../types/mission.interface';
+	import { darkForest } from '../../themes/dark-forest.theme';
 
 	const missions: Mission[] = [
 		{
@@ -59,7 +60,7 @@
 <section class="print-area">
 	<div class="card-grid">
 		{#each missions as mission}
-			<MissionCard {mission} layout={BottomPanelLayout} theme="bottom-panel" />
+			<MissionCard {mission} layout={BottomPanelLayout} theme={darkForest} />
 		{/each}
 	</div>
 </section>
