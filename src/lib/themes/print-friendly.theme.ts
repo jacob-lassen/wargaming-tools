@@ -1,6 +1,7 @@
 import type { CardTheme } from './card-theme.interface';
 
 export const printFriendly: CardTheme = {
+	name: 'Print Friendly',
 	surface: {
 		background: '#ffffff',
 		border: '#cfcfcf',

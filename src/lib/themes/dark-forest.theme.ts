@@ -1,6 +1,7 @@
 import type { CardTheme } from './card-theme.interface';
 
 export const darkForest: CardTheme = {
+	name: 'Dark Forest',
 	surface: {
 		background: 'linear-gradient(180deg, #18251f 0%, #09100c 100%)',
 		border: 'rgba(255, 255, 255, 0.14)',

@@ -1,4 +1,5 @@
 export interface CardTheme {
+	name: string;
 	surface: {
 		background: string;
 		border: string;
