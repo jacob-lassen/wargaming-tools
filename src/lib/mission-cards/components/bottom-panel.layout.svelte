@@ -13,12 +13,12 @@
 	const paragraphs = $derived(mission.text.split('\n').filter(Boolean));
 	const layoutStyle = $derived([
 		`--color-primary: ${theme.palette.primary}`,
-		`--color-secondary: ${theme.palette.secondary}`,
 		`--color-accent: ${theme.palette.accent}`,
 		`--color-accent-soft: ${theme.palette.accentSoft}`,
 		`--text-main: ${theme.text.primary}`,
-		`--text-muted: ${theme.text.muted}`,
-		`--card-chrome-bg: ${theme.effects?.chromeBackground ?? 'none'}`
+		`--text-accent: ${theme.text.accent}`,
+		`--card-chrome-bg: ${theme.effects?.chromeBackground ?? 'none'}`,
+		`--color-border: ${theme.surface.border}`,
 	].join('; '));
 </script>
 
@@ -101,15 +101,15 @@
 		justify-content: space-between;
 		margin: 0 -1rem -1rem;
 		padding: 0.85rem 1rem;
-		background: var(--color-secondary);
-		border-top: 1px solid var(--color-accent-soft);
+		background: var(--color-accent);
+		border-top: 1px solid var(--color-border);
 		font-size: 0.52rem;
 		text-transform: uppercase;
 		letter-spacing: 0.16em;
 	}
 
 	.reward-footer span {
-		color: var(--text-muted);
+		color: var(--text-accent);
 	}
 
 	.reward-footer strong {
@@ -118,6 +118,6 @@
 		font-size: 0.92rem;
 		line-height: 1;
 		letter-spacing: 0.04em;
-		color: var(--text-main);
+		color: var(--text-accent);
 	}
 </style>

@@ -36,7 +36,7 @@
 		overflow: hidden;
 		border-radius: 16px;
 		background: var(--card-bg);
-		border: 1px solid var(--card-border);
+		border: 2px solid var(--card-border);
 		box-shadow:
 			0 18px 32px -20px var(--card-shadow),
 			inset 0 1px 0 rgba(255, 255, 255, 0.08);

@@ -7,11 +7,10 @@ export interface CardTheme {
 	};
 	text: {
 		primary: string;
-		muted: string;
+		accent: string;
 	};
 	palette: {
 		primary: string;
-		secondary: string;
 		accent: string;
 		accentSoft: string;
 	};
