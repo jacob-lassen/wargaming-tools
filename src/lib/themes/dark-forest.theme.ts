@@ -4,8 +4,7 @@ export const darkForest: CardTheme = {
 	name: 'Dark Forest',
 	surface: {
 		background: 'linear-gradient(180deg, #18251f 0%, #09100c 100%)',
-		border: ' #0a120a',
-		shadow: 'rgba(0, 0, 0, 0.35)'
+		border: ' #0a120a'
 	},
 	text: {
 		primary: '#f5efe4',

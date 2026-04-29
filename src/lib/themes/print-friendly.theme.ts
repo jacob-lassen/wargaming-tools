@@ -4,8 +4,7 @@ export const printFriendly: CardTheme = {
 	name: 'Print Friendly',
 	surface: {
 		background: '#ffffff',
-		border: '#222222',
-		shadow: 'rgba(0, 0, 0, 0.08)'
+		border: '#222222'
 	},
 	text: {
 		primary: '#000000',

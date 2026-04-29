@@ -16,7 +16,6 @@
 	const hostStyle = $derived([
 		`--card-bg: ${theme.surface.background}`,
 		`--card-border: ${theme.surface.border}`,
-		`--card-shadow: ${theme.surface.shadow}`,
 		`--text-main: ${theme.text.primary}`
 	].join('; '));
 </script>
@@ -37,9 +36,6 @@
 		border-radius: 16px;
 		background: var(--card-bg);
 		border: 2px solid var(--card-border);
-		box-shadow:
-			0 18px 32px -20px var(--card-shadow),
-			inset 0 1px 0 rgba(255, 255, 255, 0.08);
 		color: var(--text-main);
 		print-color-adjust: exact;
 		-webkit-print-color-adjust: exact;
@@ -55,7 +51,6 @@
 
 	@media print {
 		.mission-card {
-			box-shadow: none;
 			margin: 0;
 		}
 	}

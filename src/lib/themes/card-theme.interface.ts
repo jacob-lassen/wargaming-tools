@@ -3,7 +3,6 @@ export interface CardTheme {
 	surface: {
 		background: string;
 		border: string;
-		shadow: string;
 	};
 	text: {
 		primary: string;
