@@ -26,6 +26,7 @@
 
 <style>
 	.mission-card {
+		--card-border-width: 2px;
 		width: 63mm;
 		height: 88mm;
 		box-sizing: border-box;
@@ -34,13 +35,24 @@
 		flex-direction: column;
 		overflow: hidden;
 		border-radius: 16px;
+		clip-path: inset(0 round 16px);
 		background: transparent;
-		border: 2px solid var(--card-border);
 		color: var(--text-main);
 		print-color-adjust: exact;
 		-webkit-print-color-adjust: exact;
 		break-inside: avoid;
 		page-break-inside: avoid;
+	}
+
+	.mission-card::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		box-sizing: border-box;
+		border: var(--card-border-width) solid var(--card-border);
+		border-radius: inherit;
+		pointer-events: none;
 	}
 
 	@media (max-width: 640px) {
