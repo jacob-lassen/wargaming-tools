@@ -34,7 +34,7 @@
 		flex-direction: column;
 		overflow: hidden;
 		border-radius: 16px;
-		background: var(--card-bg);
+		background: transparent;
 		border: 2px solid var(--card-border);
 		color: var(--text-main);
 		print-color-adjust: exact;

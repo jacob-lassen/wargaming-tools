@@ -12,6 +12,7 @@
 
 	const paragraphs = $derived(mission.text.split('\n').filter(Boolean));
 	const layoutStyle = $derived([
+		`--card-bg: ${theme.surface.background}`,
 		`--color-primary: ${theme.palette.primary}`,
 		`--color-accent: ${theme.palette.accent}`,
 		`--color-accent-soft: ${theme.palette.accentSoft}`,
@@ -22,15 +23,17 @@
 </script>
 
 <div class="bottom-panel-layout" style={layoutStyle}>
-	<header class="card-header">
-		<h2>{mission.name}</h2>
-	</header>
+	<div class="card-content">
+		<header class="card-header">
+			<h2>{mission.name}</h2>
+		</header>
 
-	<section class="card-body">
-		{#each paragraphs as paragraph}
-			<p>{paragraph}</p>
-		{/each}
-	</section>
+		<section class="card-body">
+			{#each paragraphs as paragraph}
+				<p>{paragraph}</p>
+			{/each}
+		</section>
+	</div>
 
 	<footer class="reward-footer">
 		<span>Reward</span>
@@ -47,7 +50,6 @@
 		flex-direction: column;
 		height: 100%;
 		box-sizing: border-box;
-		padding: 1rem;
 		color: var(--text-main);
 	}
 
@@ -56,6 +58,14 @@
 	.reward-footer {
 		position: relative;
 		z-index: 1;
+	}
+
+	.card-content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		padding: 1rem;
+		background: var(--card-bg);
 	}
 		
 
@@ -91,7 +101,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin: 0 -1rem -1rem;
 		padding: 0.85rem 1rem;
 		background: var(--color-accent);
 		border-top: 1px solid var(--color-border);
