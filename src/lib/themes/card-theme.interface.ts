@@ -13,7 +13,4 @@ export interface CardTheme {
 		accent: string;
 		accentSoft: string;
 	};
-	effects?: {
-		chromeBackground?: string;
-	};
 }

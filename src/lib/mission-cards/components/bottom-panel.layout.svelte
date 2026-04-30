@@ -17,14 +17,11 @@
 		`--color-accent-soft: ${theme.palette.accentSoft}`,
 		`--text-main: ${theme.text.primary}`,
 		`--text-accent: ${theme.text.accent}`,
-		`--card-chrome-bg: ${theme.effects?.chromeBackground ?? 'none'}`,
 		`--color-border: ${theme.surface.border}`,
 	].join('; '));
 </script>
 
 <div class="bottom-panel-layout" style={layoutStyle}>
-	<div class="card-chrome"></div>
-
 	<header class="card-header">
 		<h2>{mission.name}</h2>
 	</header>
@@ -42,6 +39,7 @@
 </div>
 
 <style>
+
 	.bottom-panel-layout {
 		position: relative;
 		display: flex;
@@ -53,19 +51,13 @@
 		color: var(--text-main);
 	}
 
-	.card-chrome {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		background: var(--card-chrome-bg);
-	}
-
 	.card-header,
 	.card-body,
 	.reward-footer {
 		position: relative;
 		z-index: 1;
 	}
+		
 
 	.card-header {
 		display: flex;
