@@ -43,7 +43,17 @@ const missions: Mission[] = [
     },
     {
         name: 'Steady progress',
-        text: 'Control more objectives at the end of the turn, than you did at the start of the turn.',
+        text: 'Control more objectives at the end of the round, than you did at the start of the round.',
+        reward: '1VP'
+    },
+    {
+        name: 'Calculated losses',
+        text: 'Control less objectives at the end of the round, than you did at the start of the round.',
+        reward: '2VP'
+    },
+    {
+        name: 'Hold strong',
+        text: 'Control the same objective marker at the start and end of the round.',
         reward: '1VP'
     },
 ];
